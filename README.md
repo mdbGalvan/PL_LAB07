@@ -1,0 +1,68 @@
+#Simple example of how to use Jison in the browser.
+
+## Resumen
+
+>Se reescribe el *Analizador Sintáctico de [PL0 Grammar](http://en.wikipedia.org/wiki/Recursive_descent_parser)* realizado en la realizado en esa práctica [práctica 5](http://pl-lab05.herokuapp.com/) usando en esta ocasión *Jison*. También podría observarse la [práctica 6](http://pl-lab06.herokuapp.com/) realizada con *PGE.js*.
+
+>Además, se tuvo que:
+
+>1. Sólo usuarios autenticados pueden salvar sus programas en la base de datos. 
+>2. Extiender la autenticación *OAuth* para que además de Google pueda hacerse con Twitter ó GitHub ó Facebook ó ... Sólo debe implementarse una.
+>3. Método de Entrega:
+>>* Use un repositorio privado en BitBucket o bien solicite al administrador del Centro de Cálculo un repositorio privado en GitHub.
+>>* Comparta dicho repositorio con sus colaboradores y con el profesor.
+>>* Suba la práctica al workshop/taller antes de la fecha límite.
+>>* Cuando el taller pase a la fase de evaluación haga público su repositorio.
+
+>>![alt text](http://pl-lab06.herokuapp.com/images/PL0.png "PL/0")
+
+## Motivación
+
+>La aplicación fue propuesta para ser desarrolla en la asignatura **Procesadores de Lenguajes**, del tercer año del **Grado en Ingeniería Informática**. Se corresponde con la 7ª práctica de la asignatura.
+
+##  Funcionamiento
+
+>Puede probar en [Heroku](http://pl-lab07.herokuapp.com/), el funcionamiento del *Analizador Sintáctico del Lenguaje PL/0 usando Jison*.
+
+>Pueden cargarse ejemplos previamente *salvados* de la gramática PL/0 cliqueando sobre ellos, también es posible subir un fichero propio o incluso introducir el código en el textarea. Una vez, cargada puedes pulsar el botón de parse para analizar el código. Luego, se muestra el resultado de lo analizado.
+
+>También, cabe la opción de guardar el código introducido (por fichero o a mano). Para ello, se deberá introducir un nombre en el recuadro que se encuentra debajo de: `Save the code as` y clickear.
+
+>En esta práctica también se ha añadido la opción de que sólo pueden salvar datos aquellas personas autentificadas por facebook o google.
+
+>*Nota*: Las palabras reservadas de la gramática (if, call, ...) las acepta tanto en mayúscula como en minúscula. Aunque si se usa en mayúscula el codemirror no las reconoce, por lo que, queda mejor al ponerlas en mayúscula.
+
+## Desarrollo
+
+>Los lenguajes y herramientas (frameworks, librerías, etc.) utilizados para el desarrollo del presente proyecto fueron:
+
+>* [Ruby gems](http://rubygems.org/)
+* [Sinatra](http://www.sinatrarb.com/configuration.html)
+* [Heroku](https://dashboard.heroku.com/apps)
+* HTML/CSS/Javascript
+* [JQuery](http://jquery.com/)
+* [PEG.js](http://pegjs.majda.cz/)
+* [DataMapper](http://datamapper.org/docs/)
+* [Sass](http://sass-lang.com/) 
+* [MathJax](http://docs.mathjax.org/en/latest/start.html)
+* [SQLite](https://sqlite.org/)
+* [PostgreSQL](http://www.postgresql.org/)
+* [Jison](http://zaach.github.io/jison/)
+
+## Tests
+
+>Entorno de pruebas basado en [Mocha](http://visionmedia.github.io/mocha/) y [Chai](http://chaijs.com/guide/installation/). 
+
+>Pueden ejecutarse las pruebas [aquí](http://pl-lab06.herokuapp.com/tests).
+
+
+## Colaboradores
+
+| Autores | E-mail |
+| ---------- | ---------- |
+| María D. Batista Galván   | magomenlopark@gmail.com  |
+
+
+## Licencia
+
+>Léase el archivo LICENSE.txt.
