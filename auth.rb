@@ -7,7 +7,7 @@ require 'omniauth-twitter'
 use OmniAuth::Builder do
   config = YAML.load_file 'config/config.yml'
   # http://richonrails.com/articles/google-authentication-in-ruby-on-rails
-  provider :google_oauth2, config['identifier_gg'], config['secret_gg']
+  provider :google_oauth2, config['identifier_gg_local'], config['secret_gg_local']
   # https://github.com/mkdynamic/omniAuth-facebook
   # https://www.youtube.com/watch?v=YAcg6ejylL0
   provider :facebook, config['identifier_fb'], config['secret_fb']
@@ -18,7 +18,9 @@ end
 get '/auth/:name/callback' do
   session[:auth] = @auth = request.env['omniauth.auth']
   session[:name] = @auth['info'].name
-  session[:image] = @auth['info'].image
+  session[:image] = @auth['info']['image']
+  session[:email] = @auth['info']['email']
+  session[:url] = @auth['extra']['raw_info']['link']
   puts "params = #{params}"
   puts "@auth.class = #{@auth.class}"
   puts "@auth info = #{@auth['info']}"

@@ -82,11 +82,27 @@ nav a.current {
 
 /* ESTILO DEL AVATAR */
 #avatar {
-  color: #444444;
-  font-weight: bold;
-  padding: 5px;
-  vertical-align: middle;
-  text-align: right; }
+  list-style-type: none;
+  float: right; }
+  #avatar ul {
+    float: right;
+    margin: -8px 0px 20px 0px;
+    list-style: none; }
+  #avatar li {
+    display: inline;
+    text-align: center;
+    margin: 0 10px 0 0; }
+    #avatar li a {
+      color: #333333;
+      text-decoration: none;
+      font-weight: bold;
+      line-height: 16px;
+      white-space: nowrap; }
+      #avatar li a img {
+        vertical-align: middle;
+        margin: 0px 5px 0px -7px; }
+      #avatar li a:hover {
+        color: #ffffff; }
 
 /* ESTILO DE LOS FLASH */
 .flash {

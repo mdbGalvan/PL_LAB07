@@ -44,9 +44,12 @@ get '/:selected?' do |selected|
   if session[:name] == nil then nobody = "hidden" else nobody = "unhidden" end
   user = session[:name] 
   img = session[:image]
+  url = session[:url]
+  email = session[:email]
   source = if c then c.source else "begin \n\ta = 3-2-1 \nend." end
   erb :index, 
-      :locals => { :programs => programs, :source => source, :user => user, :nobody => nobody, :img => img }
+      :locals => {  :programs => programs, :source => source, 
+                    :user => user, :nobody => nobody, :img => img, :url => url, :email => email }
 end
 
 post '/save' do

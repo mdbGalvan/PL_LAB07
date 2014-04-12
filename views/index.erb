@@ -1,8 +1,19 @@
 
 <div id="content">
 
-  <div id="avatar" class=<%= nobody %>> 
-    <%= user %> <img src=<%= img %> width=25 height=25>  
+  <div id="avatar">
+    <ul class=<%= nobody %>>
+      <li>
+        <a href=<%= url %>>
+          <img src=<%= img %> title="Site Web" target="_blank" width=20 height=20> <%= user %>
+        </a>
+      </li>
+      <li>
+        <a href="/logout">
+          <img src="images/logout.png" title="Sign Out" width=20 height=20>
+        </a>
+      </li>
+    </ul>
   </div>
 
   <p></p>

@@ -118,11 +118,32 @@ nav a.current {
 /* ESTILO DEL AVATAR */
 
 #avatar {
-  color: $black;
-  font-weight: bold;
-  padding: 5px;
-  vertical-align: middle;
-  text-align: right;
+  list-style-type: none;
+  float: right;
+  ul {
+    float: right;
+    margin: -8px 0px 20px 0px;
+    list-style: none;
+  }
+  li {
+    display: inline;
+    text-align: center;
+    margin: 0 10px 0 0;
+    a {
+      color: #333333;
+      text-decoration: none;
+      font-weight: bold;
+      line-height: 16px;
+      white-space: nowrap;
+      img {
+        vertical-align: middle;
+        margin: 0px 5px 0px -7px;
+      }
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
 }
 
 /* ESTILO DE LOS FLASH */
