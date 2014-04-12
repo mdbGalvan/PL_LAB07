@@ -39,7 +39,14 @@
       </tr>
       <tr>
         <td><button class="mylink" id="parse" type="button">parse</button></td>
-        <td></td>
+        <td>
+          <form action="/delete" method="post">
+            <label for="deleteas">Delete the code as:</label>
+            <input id="deleteas" type="text" name="fname" 
+                   title="Un identificador (que no sea la palabra 'test')"
+                   pattern="^(?!test$)\w+$"/>
+          </form>
+        </td>
       </tr>
     </table>
   </p>
