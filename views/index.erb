@@ -1,0 +1,74 @@
+
+<div id="content">
+
+  <p></p>
+
+  <p>
+
+    <table class="loadfile">
+      <tr>
+        <td class="save">Select a file already stored:</td>
+        <td>Or write your own code:</td>
+      </tr>
+      <tr>
+        <td>
+          <nav>
+            <ul>
+              <% programs.sort.each do |p| %>
+                <li><a href="<%= p.name %>" <%=current?('/'+p.name)%>><%= p.name %></a></li>
+              <% end %>
+            </ul>
+          </nav>  
+          <p>
+            Or load an existing file:
+          </p>
+          <input type="file" id="examples" />
+        </td>
+        <td>
+          <form action="/save" method="post">
+            <textarea id="input" name="input" autofocus rows = "7">
+<%= source %>
+            </textarea>
+            <br/>
+            <label for="saveas">Save the code as:</label>
+            <input id="saveas" type="text" name="fname" 
+                   title="Un identificador (que no sea la palabra 'test')"
+                   pattern="^(?!test$)\w+$"/>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td><button class="mylink" id="parse" type="button">parse</button></td>
+        <td></td>
+      </tr>
+    </table>
+  </p>
+
+
+  <p>
+    <div id="flash"><%= flash[:notice] if flash[:notice]%></div>
+  </p>
+
+  <div class="hidden" id="out">
+    <table class="ini">
+      <thead>
+        <tr>
+          <th>Tokens</th>
+        </tr>
+      </thead>
+      <tbody class="scrollContent">
+        <tr>
+          <td>
+            <div class="output"><!-- Output goes here! --> 
+              <pre>
+<span id="output"></span>
+              </pre>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div> <!-- content -->
+

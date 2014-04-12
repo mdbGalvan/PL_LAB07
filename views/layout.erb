@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>jison</title>
+    <link rel="icon" type="image/jpg" href="images/favicon.jpg" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8" />
+    <link href="lib/codemirror.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="lib/codemirror.js"></script>
+    <script src="lib/mode/pascal/pascal.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="/images/logo.png">
+      <h1>Analizador Sintáctico del Lenguaje PL0 usando Jison</h1>
+    </header>
+    <p>
+      <div id="flash"><%= flash[:welcome] if flash[:welcome]%></div>
+    </p>
+    <nav>
+      <ul>
+        <li> <a href="/grammar"  title="Grammar" <%=current?("/grammar")%>>Grammar</a> </li>
+        <li> <a href="/"  title="Home" <%=current?("/")%>>Home</a> </li>
+        <li> <a href="/tests"  title="Tests" <%=current?("/tests")%>>Tests</a> </li>
+        <li> <a href="/auth/google_oauth2"  title="Google" <%=current?("/auth/google_oauth2")%>>Sign in with Google</a> </li>
+        <!--<li> <a href="/auth/twitter"  title="Twitter" <%=current?("/auth/twitter")%>>Sign in with Twitter</a> </li>-->
+        <li> <a href="/auth/facebook"  title="Facebook" <%=current?("/auth/facebook")%>>Sign in with Facebook</a> </li>
+        <li> <a href="https://github.com/mdbGalvan/PL_LAB07" target="_blank" title="Repo">Repo</a> </li>
+        <li> <a href="http://en.wikipedia.org/wiki/Recursive_descent_parser#Example_parser" target="_blank"  title="Wikipedia">PL0</a> </li>
+        <li> <a href="http://zaach.github.io/jison/" target="_blank" title="Jison">Jison</a> </li>
+        <li> <a href="http://intridea.github.io/omniauth/" target="_blank" title="Intridea Omniauth">Omniauth</a> </li>
+        <li> <a href="https://console.developers.google.com/project" target="_blank" title="Google Developers Console">GDC</a> </li>
+        <li> <a href="http://crguezl.github.io/pl-html/" target="_blank" title="PLGH">PL-GH</a> </li>
+        <li> <a href="https://github.com/SFEley/sinatra-flash" target="_blank" title="sinatra-flash">sinatra-flash</a> </li>
+      </ul>
+    </nav>
+    <section>
+      <%= yield %>
+    </section>
+    <script src="js/jquery.stickytableheaders.js"></script>
+    <script type="text/javascript">$("table.ini").stickyTableHeaders();</script>
+    <footer>
+      <script>
+        var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("input"), {
+          lineNumbers: true,
+          viewportMargin: Infinity
+        });
+      </script>
+      <script type="text/javascript" src="js/calculator.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+    </footer>
+  </body>
+</html>
