@@ -178,7 +178,6 @@ argument_star
   ;
 
 // ***** NUMBER
-
 number: NUMBER
   {
     $$ = {
