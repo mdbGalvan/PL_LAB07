@@ -29,7 +29,7 @@ get '/auth/:name/callback' do
   #PP.pp @auth
   #puts "*************@auth.methods*****************"
   #PP.pp @auth.methods.sort
-  flash[:welcome] = %Q{<div class="welcome">Welcome, #{@auth['info'].name}</div>}
+  flash[:notice] = %Q{<div class="welcome">Welcome, #{@auth['info'].name}</div>}
   redirect '/'
 end
 
