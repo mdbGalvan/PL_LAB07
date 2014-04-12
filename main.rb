@@ -25,6 +25,13 @@ get '/grammar' do
   erb :grammar
 end
 
+get '/logout' do
+  old_user = session[:username]
+  session[:username] = nil
+  flash[:notice] = %Q{<div class="success">Logged out #{old_user}</div>}
+  redirect back
+end
+
 get '/:selected?' do |selected|
   puts "*************@auth*****************"
   puts session[:name]
@@ -33,9 +40,10 @@ get '/:selected?' do |selected|
   pp programs
   puts "selected = #{selected}"
   c  = PL0Program.first(:name => selected)
+  user = session[:name] 
   source = if c then c.source else "begin \n\ta = 3-2-1 \nend." end
   erb :index, 
-      :locals => { :programs => programs, :source => source }
+      :locals => { :programs => programs, :source => source, :user => user }
 end
 
 post '/save' do

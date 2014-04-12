@@ -1,6 +1,10 @@
 
 <div id="content">
 
+  <div id="avatar"> 
+    <%= user %> <img src="images/avatar.png" WIDTH=25 HEIGHT=25>  
+  </div>
+
   <p></p>
 
   <p>
@@ -41,7 +45,7 @@
         <td><button class="mylink" id="parse" type="button">parse</button></td>
         <td>
           <form action="/delete" method="post">
-            <label for="deleteas">Delete the code as:</label>
+            <label for="deleteas">Delete the code:</label>
             <input id="deleteas" type="text" name="fname" 
                    title="Un identificador (que no sea la palabra 'test')"
                    pattern="^(?!test$)\w+$"/>

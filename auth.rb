@@ -37,3 +37,4 @@ get '/auth/failure' do
   flash[:notice] = params[:message] 
   redirect '/'
 end
+

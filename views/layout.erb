@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>jison</title>
+    <title>Parser using Jison</title>
     <link rel="icon" type="image/jpg" href="images/favicon.jpg" />
     <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8" />
     <link href="lib/codemirror.css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <h1>Analizador Sintáctico del Lenguaje PL0 usando Jison</h1>
     </header>
     <p>
-      <div id="flash"><%= flash[:welcome] if flash[:welcome]%></div>
+      <!--<div id="flash"><%= flash[:welcome] if flash[:welcome]%></div>-->
     </p>
     <nav>
       <ul>
@@ -26,13 +26,14 @@
         <li> <a href="/auth/google_oauth2"  title="Google" <%=current?("/auth/google_oauth2")%>>Sign in with Google</a> </li>
         <!--<li> <a href="/auth/twitter"  title="Twitter" <%=current?("/auth/twitter")%>>Sign in with Twitter</a> </li>-->
         <li> <a href="/auth/facebook"  title="Facebook" <%=current?("/auth/facebook")%>>Sign in with Facebook</a> </li>
+        <li> <a href="/logout"  title="Sign Out" <%=current?("/auth/facebook")%>>Sign Out</a> </li>
         <li> <a href="https://github.com/mdbGalvan/PL_LAB07" target="_blank" title="Repo">Repo</a> </li>
         <li> <a href="http://en.wikipedia.org/wiki/Recursive_descent_parser#Example_parser" target="_blank"  title="Wikipedia">PL0</a> </li>
         <li> <a href="http://zaach.github.io/jison/" target="_blank" title="Jison">Jison</a> </li>
         <li> <a href="http://intridea.github.io/omniauth/" target="_blank" title="Intridea Omniauth">Omniauth</a> </li>
         <li> <a href="https://console.developers.google.com/project" target="_blank" title="Google Developers Console">GDC</a> </li>
         <li> <a href="http://crguezl.github.io/pl-html/" target="_blank" title="PLGH">PL-GH</a> </li>
-        <li> <a href="https://github.com/SFEley/sinatra-flash" target="_blank" title="sinatra-flash">sinatra-flash</a> </li>
+        <li> <a href="https://github.com/SFEley/sinatra-flash" target="_blank" title="sinatra-flash">Flash</a> </li>
       </ul>
     </nav>
     <section>

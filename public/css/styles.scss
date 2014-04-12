@@ -115,6 +115,16 @@ nav a.current {
   text-align: center;
 }
 
+/* ESTILO DEL AVATAR */
+
+#avatar {
+  color: $black;
+  font-weight: bold;
+  padding: 5px;
+  vertical-align: middle;
+  text-align: right;
+}
+
 /* ESTILO DE LOS FLASH */
 
 .flash {

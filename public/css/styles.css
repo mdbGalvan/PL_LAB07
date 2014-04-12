@@ -80,6 +80,14 @@ nav a.current {
 .centered {
   text-align: center; }
 
+/* ESTILO DEL AVATAR */
+#avatar {
+  color: #444444;
+  font-weight: bold;
+  padding: 5px;
+  vertical-align: middle;
+  text-align: right; }
+
 /* ESTILO DE LOS FLASH */
 .flash {
   width: 600px;
