@@ -28,7 +28,8 @@ end
 get '/logout' do
   old_user = session[:name]
   session[:name] = nil
-  flash[:notice] = %Q{<div class="success">Logged out #{old_user}</div>}
+  session[:auth] = nil
+  flash[:notice] = %Q{<div class="success">Bye, #{old_user}</div>}
   redirect back
 end
 
@@ -96,9 +97,11 @@ post '/delete' do
       if c
         c.source = params["input"]
         c.destroy
-      end
-      flash[:notice] = 
+        flash[:notice] = 
         %Q{<div class="success">File deleted as #{c.name} by #{session[:name]}.</div>}
+      else
+        flash[:notice] = %Q{<div class="error">Not exist file.</div>}
+      end
       pp c
       redirect to '/'+name
     end
