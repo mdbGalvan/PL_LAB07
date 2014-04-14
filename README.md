@@ -6,13 +6,20 @@
 
 >Además, se tuvo que:
 
->1. Sólo usuarios autenticados pueden salvar sus programas en la base de datos. 
->2. Extiender la autenticación *OAuth* para que además de Google pueda hacerse con Twitter ó GitHub ó Facebook ó ... Sólo debe implementarse una.
->3. Método de Entrega:
+>1. La salida debe ser el AST del programa de entrada
+>2. Modifique block y statement para que los procedure reciban argumentos y las llamadas a procedimiento puedan pasar argumentos.
+>3. Añada if ... then ... else ....
+>4. Actualice la documentación de la gramática para que refleje la gramática ampliada
+>5. Limite el número de programas que se pueden salvar a un número prefijado, por ejemplo 10. Si se intenta salvar uno se suprime uno al azar y se guarda el nuevo.
+>6. Las pruebas deben comprobar que los AST generados reflejan la semántica del lenguaje así como alguna situación de error
+>7. Sólo usuarios autenticados pueden salvar sus programas en la base de datos.
+>8. Extienda la autenticación OAuth para que además de Google pueda hacerse con Twitter ó GitHub ó Facebook ó ... Sólo debe implementar una.
+>9. Método de Entrega:
 >>* Use un repositorio privado en BitBucket o bien solicite al administrador del Centro de Cálculo un repositorio privado en GitHub.
 >>* Comparta dicho repositorio con sus colaboradores y con el profesor.
 >>* Suba la práctica al workshop/taller antes de la fecha límite.
 >>* Cuando el taller pase a la fase de evaluación haga público su repositorio.
+
 
 >>![alt text](http://pl-lab06.herokuapp.com/images/PL0.png "PL/0")
 
