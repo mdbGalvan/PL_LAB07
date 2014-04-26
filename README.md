@@ -21,7 +21,7 @@
 >>* Cuando el taller pase a la fase de evaluación haga público su repositorio.
 
 
->>![alt text](http://pl-lab06.herokuapp.com/images/PL0.png "PL/0")
+>>![alt text](http://pl-lab07.herokuapp.com/images/PL0.png "PL/0")
 
 ## Motivación
 
@@ -60,7 +60,7 @@
 
 >Entorno de pruebas basado en [Mocha](http://visionmedia.github.io/mocha/) y [Chai](http://chaijs.com/guide/installation/). 
 
->Pueden ejecutarse las pruebas [aquí](http://pl-lab06.herokuapp.com/tests).
+>Pueden ejecutarse las pruebas [aquí](http://pl-lab07.herokuapp.com/tests).
 
 
 ## Colaboradores
