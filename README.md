@@ -58,7 +58,7 @@
 
 ## Tests
 
->Entorno de pruebas basado en [Mocha](http://visionmedia.github.io/mocha/) y [Chai](http://chaijs.com/guide/installation/). 
+>Entorno de pruebas basado en [Mocha](http://mochajs.org/) y [Chai](http://chaijs.com/guide/installation/). 
 
 >Pueden ejecutarse las pruebas [aquí](http://pl-lab07.herokuapp.com/tests).
 
